@@ -10,8 +10,9 @@ const Navbar = () => {
             <li>Home</li>
             <li>About</li>
             <li>Program</li>
+            <li>Blog</li>
             <li>Next Event</li>
-            <li>Contact   us</li>
+            <li><button className='btn'>Contact us</button></li>
         </ul>
     </nav>
   )
