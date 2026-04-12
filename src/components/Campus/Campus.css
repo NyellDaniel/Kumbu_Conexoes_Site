@@ -1,0 +1,96 @@
+.campus {
+    margin: 100px auto;
+    width: 90%;
+    text-align: center;
+}
+
+/* GRID MAIS MODERNO */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* CARD */
+.gallery img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 14px;
+    cursor: pointer;
+    /* Adicionada uma borda sutil para alinhar com o design */
+    border: 1px solid rgba(13, 15, 43, 0.05); 
+
+    transition: 
+        transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+        filter 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* HOVER PREMIUM - Ajustado para o verde da Kumbu */
+.gallery img:hover {
+    transform: translateY(-10px) scale(1.04);
+    filter: brightness(0.85);
+    /* Sombra agora usa um tom do azul profundo do logo */
+    box-shadow: 0 20px 40px rgba(13, 15, 43, 0.25);
+}
+
+/* EFEITO DE FOCO (outros ficam apagados) */
+.gallery:hover img {
+    filter: brightness(0.6);
+}
+
+.gallery img:hover {
+    filter: brightness(1);
+}
+
+/* ANIMAÇÃO DE ENTRADA - Preservada */
+.gallery img {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+/* delay para efeito stagger - Preservado */
+.gallery img:nth-child(1) { animation-delay: 0.1s; }
+.gallery img:nth-child(2) { animation-delay: 0.2s; }
+.gallery img:nth-child(3) { animation-delay: 0.3s; }
+.gallery img:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* BOTÃO - Coordenado com as cores da marca */
+.campus .btn {
+    margin-top: 20px;
+    background-color: #0d0f2b; /* Azul Profundo */
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.campus .btn:hover {
+    background-color: #20ac6c; /* Verde Kumbo no hover */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(32, 172, 108, 0.2);
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+        height: 220px;
+    }
+}

@@ -1,0 +1,15 @@
+.title{
+    text-align: center;
+    color: #20ac6c; /* Verde Kumbo aplicado ao subtítulo/tag superior */
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 70px 0 30px;
+}
+
+.title h2{
+    font-size: 23px;
+    color: #0d0f2b; /* Azul Profundo Kumbo aplicado ao título principal */
+    margin-top: 5px;
+    text-transform: none;
+}

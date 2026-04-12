@@ -1,22 +1,128 @@
-nav{
+nav {
     width: 100%;
-   /* background: #333;*/
     color: #fff;
-    padding: 4px 0;
+    padding: 14px 0;
+
     position: fixed;
     top: 0;
     left: 0;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 10;
+
+    z-index: 1000;
+
+    transition: all 0.4s ease;
 }
-.logo{
-    width: 180px;
+
+/* ESTADO SCROLL */
+.dark-nav {
+    background: rgba(12, 44, 30, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.15);
 }
-nav ul li{
+
+/* LOGO */
+.logo {
+    width: 60px;
+    height: 60px;
+    transition: 0.3s;
+}
+
+/* LINKS */
+nav ul li {
     display: inline-block;
     list-style: none;
     margin: 5px 20px;
     font-size: 16px;
+}
+
+nav ul li a {
+    cursor: pointer;
+    position: relative;
+}
+
+/* LINHA ANIMADA */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background: #fff;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* BOTÃO */
+nav .btn {
+    background: #fff;
+    color: #217934;
+    padding: 10px 22px;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+nav .btn:hover {
+    transform: translateY(-2px);
+}
+
+/* MOBILE ICON */
+.menu-icon {
+    display: none;
+}
+
+/* -------- TABLET -------- */
+@media (max-width: 1000px) {
+    .logo {
+        width: 140px;
+    }
+
+    nav ul li {
+        margin: 10px 15px;
+    }
+}
+
+/* -------- MOBILE -------- */
+@media (max-width: 840px) {
+
+    nav {
+        padding: 12px 0;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+        background: #212ea0;
+
+        width: 220px;
+        padding-top: 80px;
+
+        transition: right 0.4s ease;
+        z-index: 999;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px 40px;
+    }
+
+    .menu-icon {
+        display: block;
+        width: 30px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .hide-mobile-menu {
+        right: -220px;
+    }
 }
