@@ -1,7 +1,7 @@
 nav {
     width: 100%;
     color: #fff;
-    padding: 14px 0;
+    padding: 10px 10%; /* Ajustado para dar respiro nas laterais */
 
     position: fixed;
     top: 0;
@@ -12,38 +12,80 @@ nav {
     justify-content: space-between;
 
     z-index: 1000;
-
     transition: all 0.4s ease;
 }
 
-/* ESTADO SCROLL */
+/* ESTADO SCROLL (DARK NAV) */
 .dark-nav {
-    background: rgba(12, 44, 30, 0.85);
+    background: rgba(12, 44, 30, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+    padding: 5px 10%; /* Fica um pouco mais fina ao rolar */
 }
 
 /* LOGO */
 .logo {
-    width: 60px;
-    height: 60px;
+    width: 65px; /* Ajustado para Kumbo.png */
+    height: auto;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-/* LINKS */
+/* BARRA DE PESQUISA (NOVO) */
+.search-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: rgba(255, 255, 255, 0.15); /* Fundo semi-transparente */
+    border-radius: 20px;
+    padding: 6px 12px;
+    margin: 0 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    flex: 1; /* Faz a barra crescer no espaço disponível */
+    max-width: 250px; /* Mas não deixa ficar gigante */
+}
+
+.search-icon {
+    width: 16px;
+    cursor: pointer;
+    filter: brightness(0) invert(1); /* Deixa o ícone branco */
+}
+
+.search-box input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* LINKS DO MENU */
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
 nav ul li {
     display: inline-block;
     list-style: none;
-    margin: 5px 20px;
-    font-size: 16px;
+    margin: 5px 15px;
+    font-size: 15px;
 }
 
 nav ul li a {
     cursor: pointer;
     position: relative;
+    color: #fff;
+    text-decoration: none;
 }
 
-/* LINHA ANIMADA */
+/* LINHA ANIMADA NOS LINKS */
 nav ul li a::after {
     content: '';
     position: absolute;
@@ -59,40 +101,48 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-/* BOTÃO */
+/* BOTÃO CONTACTO */
 nav .btn {
     background: #fff;
-    color: #217934;
+    color: #217934 !important;
     padding: 10px 22px;
     border-radius: 30px;
+    font-weight: 600;
     transition: 0.3s ease;
 }
 
 nav .btn:hover {
+    background: #f0f0f0;
     transform: translateY(-2px);
 }
 
 /* MOBILE ICON */
 .menu-icon {
     display: none;
+    width: 30px;
+    cursor: pointer;
 }
 
-/* -------- TABLET -------- */
+/* -------- RESPONSIVIDADE -------- */
+
 @media (max-width: 1000px) {
-    .logo {
-        width: 140px;
+    nav {
+        padding: 10px 5%;
     }
-
-    nav ul li {
-        margin: 10px 15px;
+    .search-box {
+        max-width: 180px;
     }
 }
 
-/* -------- MOBILE -------- */
 @media (max-width: 840px) {
+    .menu-icon {
+        display: block;
+    }
 
-    nav {
-        padding: 12px 0;
+    /* Esconde a busca no mobile para não poluir, 
+       ou você pode movê-la para dentro do ul */
+    .search-box {
+        display: none; 
     }
 
     nav ul {
@@ -100,26 +150,18 @@ nav .btn:hover {
         top: 0;
         right: 0;
         bottom: 0;
-
-        background: #212ea0;
-
+        background: #0c2c1e; /* Cor combinando com sua dark-nav */
         width: 220px;
         padding-top: 80px;
-
-        transition: right 0.4s ease;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: 0.4s;
         z-index: 999;
     }
 
     nav ul li {
         display: block;
-        margin: 25px 40px;
-    }
-
-    .menu-icon {
-        display: block;
-        width: 30px;
-        cursor: pointer;
-        z-index: 1001;
+        margin: 20px 30px;
     }
 
     .hide-mobile-menu {
