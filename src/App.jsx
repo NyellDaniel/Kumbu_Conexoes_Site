@@ -3,11 +3,10 @@ import Navbar   from './components/Navbar/Navbar'
 import Hero     from './components/Hero/Hero'
 import Services from './components/Services/Services'
 import About    from './components/About/About'
-import Cta from './components/CTA/cta.jsx'
-import WhatsApp from './components/whatsapp/whatsapp.jsx'
+import CTA      from './components/cta/cta'
 import Contact  from './components/Contact/Contact'
 import Footer   from './components/Footer/Footer'
-
+import WhatsApp from './components/whatsapp/whatsapp'
 import './index.css'
 
 const App = () => {
@@ -17,7 +16,7 @@ const App = () => {
       <Hero />
       <Services />
       <About />
-      <Cta />
+      <CTA />
       <Contact />
       <Footer />
       <WhatsApp/>
