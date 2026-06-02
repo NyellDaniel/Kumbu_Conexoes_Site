@@ -3,26 +3,24 @@ import './Partners.css'
 
 // Substitui pelos teus logos reais em src/assets/imgs/partners/
 const LOGOS = [
-  { src: '/src/assets/imgs/partners/1.jpg', alt: 'Parceiro 1' },
-  { src: '/src/assets/imgs/partners/2.jpg', alt: 'Parceiro 3' },
-  { src: '/src/assets/imgs/partners/3.jpg', alt: 'Parceiro 4' },
-  { src: '/src/assets/imgs/partners/4.jpg', alt: 'Parceiro 5' },
-  { src: '/src/assets/imgs/partners/5.jpg', alt: 'Parceiro 6' },
-  { src: '/src/assets/imgs/partners/6.jpg', alt: 'Parceiro 7' },
-  { src: '/src/assets/imgs/partners/7.jpg', alt: 'Parceiro 8' },
-  { src: '/src/assets/imgs/partners/8.jpg', alt: 'Parceiro 9' },
-  { src: '/src/assets/imgs/partners/9.jpg', alt: 'Parceiro 10' },
-  { src: '/src/assets/imgs/partners/10.jpg', alt: 'Parceiro 11' },
-  { src: '/src/assets/imgs/partners/11.jpg', alt: 'Parceiro 12' },
-  { src: '/src/assets/imgs/partners/12.jpg', alt: 'Parceiro 13' },
-   { src: '/src/assets/imgs/partners/13.PNG', alt: 'Parceiro 14' },
-  { src: '/src/assets/imgs/partners/14.PNG', alt: 'Parceiro 15' },
-  { src: '/src/assets/imgs/partners/15.jpg', alt: 'Parceiro 16' },
-  { src: '/src/assets/imgs/partners/20.jpg', alt: 'Parceiro 17' },
-
-  { src: '/src/assets/imgs/partners/gest.jpg', alt: 'Parceiro 18' },
-  { src: '/src/assets/imgs/partners/kp.jpg', alt: 'Parceiro 19' },
-  
+  { src: '/imgs/partners/1.JPG',   alt: 'Parceiro 1' },
+  { src: '/imgs/partners/2.JPG',   alt: 'Parceiro 2' },
+  { src: '/imgs/partners/3.JPG',   alt: 'Parceiro 3' },
+  { src: '/imgs/partners/4.JPG',   alt: 'Parceiro 4' },
+  { src: '/imgs/partners/5.JPG',   alt: 'Parceiro 5' },
+  { src: '/imgs/partners/6.JPG',   alt: 'Parceiro 6' },
+  { src: '/imgs/partners/7.JPG',   alt: 'Parceiro 7' },
+  { src: '/imgs/partners/8.JPG',   alt: 'Parceiro 8' },
+  { src: '/imgs/partners/9.JPG',   alt: 'Parceiro 9' },
+  { src: '/imgs/partners/10.JPG',  alt: 'Parceiro 10' },
+  { src: '/imgs/partners/11.jpg',  alt: 'Parceiro 11' },
+  { src: '/imgs/partners/12.JPG',  alt: 'Parceiro 12' },
+  { src: '/imgs/partners/13.PNG',  alt: 'Parceiro 13' },
+  { src: '/imgs/partners/14.PNG',  alt: 'Parceiro 14' },
+  { src: '/imgs/partners/15.JPG',  alt: 'Parceiro 15' },
+  { src: '/imgs/partners/20.JPG',  alt: 'Parceiro 16' },
+  { src: '/imgs/partners/gest.JPG', alt: 'Parceiro 17' },
+  { src: '/imgs/partners/kp.JPG',   alt: 'Parceiro 18' },
 ]
 
 const Partners = () => {
