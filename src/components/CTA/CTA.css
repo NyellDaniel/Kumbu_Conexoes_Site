@@ -1,0 +1,70 @@
+.cta-section {
+    background: #2db54b;
+    padding: 64px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    top: -150px; right: -100px;
+    pointer-events: none;
+}
+
+.cta-inner {
+    width: 90%; max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.cta-left h2 {
+    font-size: clamp(24px, 3vw, 38px);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+.cta-left h2 em { font-style: normal; color: #0a0c0a; }
+
+.cta-mid p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+    max-width: 320px;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    background: #0a0c0a;
+    color: #fff;
+    font-size: 14px; font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.3s,
+                transform 0.35s cubic-bezier(0.34,1.56,0.64,1),
+                box-shadow 0.3s;
+}
+.cta-btn svg { width: 16px; height: 16px; stroke: #fff; transition: transform 0.3s; }
+.cta-btn:hover {
+    background: #fff;
+    color: #0a0c0a;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+}
+.cta-btn:hover svg { stroke: #0a0c0a; transform: translateX(4px); }
+
+@media (max-width: 860px) {
+    .cta-inner { flex-direction: column; text-align: center; }
+    .cta-mid p { margin: 0 auto; }
+}
