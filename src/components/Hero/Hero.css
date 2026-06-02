@@ -204,16 +204,28 @@
 }
 .btn-primary:hover svg { transform: translateX(4px); }
 
+/* BOTÃO GHOST — reset do button */
 .btn-ghost {
+    background: none;
+    border: none;
+    cursor: pointer;
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    font-size: 14px; font-weight: 500;
+    font-size: 14px;
+    font-weight: 500;
     color: rgba(255,255,255,0.75);
     text-decoration: none;
     transition: color 0.3s;
+    font-family: inherit;
+    padding: 0;
 }
 .btn-ghost:hover { color: #fff; }
+.btn-ghost:hover .btn-play {
+    background: #2db54b;
+    border-color: #2db54b;
+    transform: scale(1.1);
+}
 
 .btn-play {
     width: 44px; height: 44px;
@@ -371,6 +383,51 @@
     border-radius: 100px;
     animation: scrollDown 1.6s ease infinite;
 }
+
+/* VIDEO MODAL */
+.video-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.88);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeUp 0.3s ease both;
+}
+
+.video-modal-inner {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+}
+
+.video-modal-player {
+    width: 100%;
+    display: block;
+    max-height: 80vh;
+    background: #000;
+}
+
+.video-modal-close {
+    position: absolute;
+    top: 12px; right: 12px;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.6);
+    border: none;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
+}
+.video-modal-close:hover { background: #2db54b; }
+.video-modal-close svg { width: 16px; height: 16px; stroke: #fff; }
+
 @keyframes scrollDown {
     0%   { transform: translateY(0); opacity: 1; }
     80%  { transform: translateY(10px); opacity: 0; }

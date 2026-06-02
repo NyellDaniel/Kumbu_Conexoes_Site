@@ -8,12 +8,14 @@ import Contact  from './components/Contact/Contact'
 import Footer   from './components/Footer/Footer'
 import WhatsApp from './components/whatsapp/whatsapp'
 import './index.css'
+import Partners from './components/Partners/Partners'
 
 const App = () => {
   return (
     <>
       <Navbar />
       <Hero />
+      <Partners />
       <Services />
       <About />
       <CTA />
