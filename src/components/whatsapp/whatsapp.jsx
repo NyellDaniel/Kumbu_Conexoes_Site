@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './WhatsApp.css'
+import './Whatsapp.css'
 
 const PHONE = '+244934030551'
 const MESSAGE = 'Olá! Gostaria de saber mais sobre os serviços da Mais Kumbu.'
