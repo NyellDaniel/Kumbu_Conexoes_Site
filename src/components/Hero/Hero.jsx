@@ -206,7 +206,7 @@ const Hero = () => {
                 </svg>
               </div>
               <div>
-                <strong>+03</strong>
+                <strong>+10</strong>
                 <span>projectos entregues</span>
               </div>
             </div>
